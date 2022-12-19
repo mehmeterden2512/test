@@ -40,6 +40,8 @@ public class C05_LocalDate {
         System.out.println(tarih.hashCode());//4141843
         System.out.println(tarih1.hashCode());//4045453
         System.out.println(tarih2.hashCode());//4045460
+        System.out.println("github test");
+
 
 
     }
