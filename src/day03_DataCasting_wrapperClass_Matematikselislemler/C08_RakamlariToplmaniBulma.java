@@ -1,5 +1,7 @@
 package day03_DataCasting_wrapperClass_Matematikselislemler;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class C08_RakamlariToplmaniBulma {
@@ -28,7 +30,18 @@ public class C08_RakamlariToplmaniBulma {
         rakamlarToplami=rakamlarToplami+birlerBasamagi; // 16 + 2 = 18
         girilenSayi = girilenSayi/10; // 0
         System.out.println("girilen sayinin rakamlar toplami : " + rakamlarToplami);
-
-
+        //**yeni konu ogrendikten sonra bu cozumu yapıyorum.**
+            girilenSayi=scan.nextInt();
+            rakamlarToplami=0;
+        List<Integer> rakamlarToplamiYeni=new ArrayList<>();
+      String rakamlar=String.valueOf(girilenSayi);
+        for (int i = 0; i <rakamlar.length() ; i++) {
+            rakamlarToplamiYeni.add(Integer.parseInt(rakamlar.substring(i,i+1)));
+        }
+        for (int rakamlarInt:rakamlarToplamiYeni
+             ) {
+                rakamlarToplami+=rakamlarInt;
+        }
+        System.out.println(girilenSayi+ " sayisinin rakamlar toplami list ile cozum : "+ rakamlarToplami);
     }
 }
