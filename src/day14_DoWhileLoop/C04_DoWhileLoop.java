@@ -20,7 +20,7 @@ public class C04_DoWhileLoop {
         }
         System.out.println(sonuc);
         // do while loop ile yapalim
-        input=144;
+        input=155;
         karekok=1;
         sonuc=false;
         do {
@@ -28,6 +28,7 @@ public class C04_DoWhileLoop {
                 System.out.println("Girilen sayinin karekoku : " + karekok);
                 sonuc=true;
                 break;
+
             }else{
                 karekok++;
             }
