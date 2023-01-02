@@ -14,7 +14,7 @@ public class C05_Scanner {
         //2.adim kullaniciya ne istediginizi soyleyin.
         System.out.println("adiinizi girin:");
         //3. adim kullanicinin girecegi degeri kaydedecegi bir variable olusturun
-        //scan objesi işe ilgili methodu olusturarak
+        //        //scan objesi işe ilgili methodu olusturarak
         //olusturdugunuz variable atayin
 
 

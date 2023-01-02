@@ -9,7 +9,7 @@ protected void maas(){
     System.out.println("hastanede uygulanan asgari ucret"+1700);
 }
 protected void ozelSigorta(){
-    System.out.println("tum personel ozel saglık ");
+    System.out.println("tum personel ozel saglık sigortasi yaptirilir");
 }
 private void privateMethod(){
     System.out.println("private method calıştı");
