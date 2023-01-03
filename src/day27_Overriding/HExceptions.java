@@ -8,7 +8,7 @@ public class HExceptions {
 
 
         int strIndex=13;
-        int arrIndex=2;
+        int arrIndex=12;
 
         System.out.println(""+str.charAt(strIndex)+arr[arrIndex]);
     }
