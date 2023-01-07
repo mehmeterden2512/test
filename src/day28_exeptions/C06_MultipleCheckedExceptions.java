@@ -24,7 +24,7 @@ public class C06_MultipleCheckedExceptions {
             FileInputStream fis=new FileInputStream("src/day28_exeptions/metin.txt");
             int k=0;
             while ((k=fis.read())!=(-1)){
-                System.out.println((char)k);
+                System.out.print((char)k);
             }
         } catch (FileNotFoundException e) {
             System.out.println("dosya bulunamadı");
