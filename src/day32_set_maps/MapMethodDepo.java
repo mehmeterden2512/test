@@ -149,6 +149,59 @@ public class MapMethodDepo {
 
 
     }
+
+    public static Map<Integer, String> soyisimleriBuyukHarfYap(Map<Integer, String> ogrenciMap) {
+
+        //soyisimleri buyuk yap
+        Set<Map.Entry<Integer, String>> entrySet = ogrenciMap.entrySet();
+        for (Map.Entry<Integer, String> integerStringEntry : ogrenciMap.entrySet())
+            {
+            String[] eachValueArr=integerStringEntry.getValue().split("-");
+            eachValueArr[1]=eachValueArr[1].toUpperCase();
+            //7-
+                integerStringEntry.setValue(eachValueArr[0]+"-"+eachValueArr[1]+"-"+eachValueArr[2]+"-"+eachValueArr[3]+"-"+eachValueArr[4]);
+        }
+
+return ogrenciMap;
+    }
+
+    public static void tumListeYazdir(Map<Integer, String> ogrenciMap) {
+        Set<Map.Entry<Integer,String>> ogrenciEntrySet=ogrenciMap.entrySet();
+        System.out.println("No   Ogrenci Bilgileri");
+        System.out.println("======================");
+
+        for (Map.Entry<Integer,String> eachEntry: ogrenciEntrySet
+        ) {
+            System.out.println(eachEntry);
+        }
+    }
+
+    public static Map<Integer, String> siniflariArtir(Map<Integer, String> ogrenciMap) {
+//Map de istediğimiz degişklik yaptıktan sonra map abdate etmenin en kolay yolu set entry.
+        Set<Map.Entry<Integer,String>> ogrenciEntrySet=ogrenciMap.entrySet();
+        System.out.println("No   Ogrenci Bilgileri");
+        System.out.println("======================");
+        for (Map.Entry<Integer, String> integerStringEntry : ogrenciMap.entrySet())
+        {
+            String[] eachValueArr=integerStringEntry.getValue().split("-");
+            int eachValueArrInt=Integer.parseInt(eachValueArr[2]);
+
+            if (eachValueArrInt==12){
+               eachValueArr[2]="Mezun";
+            }else {
+                eachValueArr[2]=eachValueArrInt+1+"";
+            }
+
+            integerStringEntry.setValue(eachValueArr[0]+"-"+
+                    eachValueArr[1]+"-"+
+                    eachValueArr[2]+"-"+
+                    eachValueArr[3]+"-"+
+                    eachValueArr[4]);
+
+
+        }
+        return ogrenciMap;
+    }
 }
 
 
