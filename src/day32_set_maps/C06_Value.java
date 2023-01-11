@@ -14,8 +14,11 @@ public class C06_Value {
          */
         //Bu  classda bir map olusuturmak isdtedgimide
         //new HashMapp<>() yaziyoruz
-        //
-        //bu kodun yerine map
+        //ancak bu bize bos bir map getiriyor
+        //bu kodun yerine MapMethodDepo'dan ogrenciMapOlustur method'unu calıstırırsak
+        //bize dolu bir map getirir.
+        //biz de onu icinde oldugumuz class'da olusturdugumuz ogrenci map'e atama yapariz
+
         Map<Integer,String> ogrenciMap=MapMethodDepo.ogrenciMapOlustur();
         ogrenciMap.put(110,"Cemal-Han-12-M-MF");
 
@@ -32,5 +35,6 @@ public class C06_Value {
         System.out.println(sonuc);//true
         System.out.println( MapMethodDepo . isimIleOgrenciArama ( ogrenciMap , "Kemal"));//false
         System.out.println(MapMethodDepo.isimIleOgrenciArama(ogrenciMap, "Cem"));
+        System.out.println(MapMethodDepo.isimIleOgrenciArama(ogrenciMap,"Ayse"));//true
     }
 }

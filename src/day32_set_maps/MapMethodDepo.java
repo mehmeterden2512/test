@@ -1,9 +1,6 @@
 package day32_set_maps;
 
-import java.util.Collection;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class MapMethodDepo {
     //Bize ogrenciMap donduren bir method olusturun
@@ -16,7 +13,7 @@ public class MapMethodDepo {
         ogreciMap.put(103, "Ali-Cem-11-K-TM");
         ogreciMap.put(104, "Ayse-Can-10-H-MF");
         ogreciMap.put(105, "Sevgi-Cem-11-K-TM");
-        ogreciMap.put(106, "Sevgi-Can-10,H-MF");
+        ogreciMap.put(106, "Sevgi-Can-10-H-MF");
         return ogreciMap;
     }
 
@@ -98,6 +95,59 @@ public class MapMethodDepo {
         ogrenciMap.put(okulNo,yeniValue);
 
         return ogrenciMap;
+    }
+    public static void subeListesiYazdir(Map<Integer,String>ogrenciMap,String sinif){
+        // verilen siniftaki ogrencilerin no, isim, soyisim, bolumlerini
+        // bir liste olarak yazdiran bir method olusturun
+
+        System.out.println("No isim soyisim bolum");
+        System.out.println("=====================");
+
+        Set<Map.Entry<Integer, String>> entrySeti = ogrenciMap.entrySet();
+
+        for (Map.Entry<Integer,String> eachEntry: entrySeti
+        ) { // 101=Ali-Can-11-H-MF
+
+            // 1- entry'den value'yu alalim
+            String entryValue= eachEntry.getValue(); // Ali-Can-11-H-MF
+
+            // 2- bu value'yu parcalayalim ve bir array'e store edelim
+            String[] valueArr= entryValue.split("-"); // [Ali, Can, 11, H, MF]
+
+            // sinif bilgisini kontrol edip
+            // istenen sinif ile ayni ise, istenen bilgileri yazdiralim
+
+            if (valueArr[2].equalsIgnoreCase(sinif)){
+                System.out.println(eachEntry.getKey() + " " +
+                        valueArr[0] +" "+
+                        valueArr[1]+ " "+
+                        valueArr[4]);
+            }
+        }
+
+    }
+
+    public static void bolumListesiOlusturma(Map<Integer, String> ogrenciMap, String bolum) {
+        //Verilen bolumdeki ogrencilerin
+        //No,isim soyisim ve sınıflarini yazdiran
+        //bir method olusturun
+        System.out.println("No   Ogrenci Bilgileri");
+        System.out.println("=========================");
+        Set<Map.Entry<Integer, String>> entrySet = ogrenciMap.entrySet();
+
+        for (Map.Entry<Integer,String> eachEntry:entrySet
+             ) {
+            String entryValue=eachEntry.getValue();
+            String [] entryValueArr=entryValue.split("-");
+            if (entryValueArr[4].equalsIgnoreCase(bolum)){//[Ali, Can, 11, H, MF]
+                System.out.println(eachEntry.getKey()+" " +
+                        entryValueArr[0]+" "+
+                        entryValueArr[1]+" " +
+                        entryValueArr[2]);
+            }
+        }
+
+
     }
 }
 
