@@ -9,7 +9,7 @@ public class C01_CumledeHarfSayilariniBulma {
     //orn: Java candir
     //outPut: J=1,a=3,v=1,c=1,n=1,d=1,
     public static void main(String[] args) {
-        String cumle = "Java candir";
+        String cumle = "bu aksam Java da cok tekrar ettim" ;
 
         //oncelikle bosluk ve noktalam isartleri yok et.
         cumle = cumle.replaceAll("\\W", "");//Javacandir
@@ -28,7 +28,7 @@ public class C01_CumledeHarfSayilariniBulma {
             }
 
         }
-
+        System.out.println(kullanimSayilariMap.keySet());
         System.out.println(kullanimSayilariMap);
     }
 }

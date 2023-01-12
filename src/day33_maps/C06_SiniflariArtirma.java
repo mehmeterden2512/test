@@ -14,5 +14,8 @@ public class C06_SiniflariArtirma {
         MapMethodDepo.tumListeYazdir(ogrenciMap);
         MapMethodDepo.siniflariArtir(ogrenciMap);
         MapMethodDepo.tumListeYazdir(ogrenciMap);
+
+
+
     }
 }

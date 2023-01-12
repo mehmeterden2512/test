@@ -9,7 +9,8 @@ public class C02_EntrySet {
     public static void main(String[] args) {
         //tum ogrencileri 101 ="Ali-Can-11-H-MF seklinde yazdiralim
         Map<Integer, String> ogrenciMap = MapMethodDepo.ogrenciMapOlustur();
-
+        // {101=Ali-Can-11-H-MF, 102=Veli-Cem-10-K-TM, 103=Ali-Cem-11-K-TM,
+        // 104=Ayse-Can-10-H-MF, 105=Sevgi-Cem-11-M-TM, 106=Sevgi-Can-10-K-MF}
         System.out.println("No   Ogrenci Bilgileri");
         System.out.println("=========================");
 
@@ -23,8 +24,8 @@ public class C02_EntrySet {
         aslında bizden istenen map icindeki elementler
         Java map'deki elementleri key -value iklisi olarak BİRLİKTE alabilmemiz icin
         ENTRY Interface'i olusturmus.
-        ...
-        ....
+        entry'ler de map ile ayni data yapisina sahip olmalidir
+          ornegin ogrenci map'ini dusunursek entry'ler
         Entry<Integer,String>
 
          */
