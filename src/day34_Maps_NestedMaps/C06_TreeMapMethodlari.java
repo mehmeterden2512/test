@@ -45,5 +45,7 @@ public class C06_TreeMapMethodlari {
 
         System.out.println(harfSayilariMap.pollLastEntry());//K=5getirdiğini siler
         System.out.println(harfSayilariMap);//{C=15, D=3}
+        System.out.println(harfSayilariMap.pollLastEntry());
+        //acıklama
     }
 }
