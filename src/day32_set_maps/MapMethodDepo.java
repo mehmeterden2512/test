@@ -107,16 +107,12 @@ public class MapMethodDepo {
 
         for (Map.Entry<Integer,String> eachEntry: entrySeti
         ) { // 101=Ali-Can-11-H-MF
-
             // 1- entry'den value'yu alalim
             String entryValue= eachEntry.getValue(); // Ali-Can-11-H-MF
-
             // 2- bu value'yu parcalayalim ve bir array'e store edelim
             String[] valueArr= entryValue.split("-"); // [Ali, Can, 11, H, MF]
-
             // sinif bilgisini kontrol edip
             // istenen sinif ile ayni ise, istenen bilgileri yazdiralim
-
             if (valueArr[2].equalsIgnoreCase(sinif)){
                 System.out.println(eachEntry.getKey() + " " +
                         valueArr[0] +" "+
@@ -237,7 +233,8 @@ return ogrenciMap;
         System.out.println("==========================");
 
         for (String each : siraliOgrenciSeti) {
-            System.out.println(each);
+           System.out.println(each);
+
         }
 
 
