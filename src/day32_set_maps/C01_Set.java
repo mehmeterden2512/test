@@ -12,6 +12,8 @@ public class C01_Set {
         karisikSet.add("Java");
         karisikSet.add('S');
         karisikSet.add(false);
+       // Iterator itr= karisikSet.iterator();
+
 
         int[] arr = new int[3];
         arr[2] = 23;

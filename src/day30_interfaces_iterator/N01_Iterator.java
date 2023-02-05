@@ -55,6 +55,8 @@ public class N01_Iterator {
             System.out.print(itr.next()+" ");
         }
 
+
+
         //iterator kullanarak 5'den buyuk sayıları silin
 
         itr=sayilar.iterator();
